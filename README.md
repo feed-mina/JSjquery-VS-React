@@ -37,3 +37,62 @@ $(function(){
 
 ## React : jquery 이후 js/css/html로 분리하지 않고 한번에 파일을 관리하기 쉽게 만들수 있도록 변형된 자바스크립트 라이브러리이다.
 
+### 리액트 에서는 ES6에서 나온 새로운 문법을 사용한다.
+```javascript
+var a = [0, 1, 2, 3, 4, 5];
+for (var i = 0; i < a.length; i++) {
+  var item = a[i];
+  console.log(item);
+}
+ 
+
+const b = [0,1,2,3,4,5]
+b.forEach(function(item){
+    console.log(item);
+})
+```
+
+```javascript
+var c = [0, 1, 2, 3, 4, 5];
+var newC = [];
+for (var i = 0; i < c.length; i++) {
+  var item = c[i];
+  newC.push(item * 2);
+}
+
+console.log(newC);
+ 
+
+const a = [0,1,2,3,4,5];
+const b = a.map(function(item){
+    return item * 2;
+})
+
+console.log(b);
+```
+
+
+```javascript
+var e = [0, 1, 2, 3, 4, 5];
+var newE = [];
+for (var i = 0; i < e.length; i++) {
+  var item = e[i];
+  if (item > 3) {
+    newE.push(item);
+  }
+}
+
+console.log(newE);
+ 
+
+const a = [0,1,2,3,4,5];
+const b = a.filter(function(item){
+    return item > 3;
+});
+console.log(b);
+```
+
+
+```javascript
+```
+
