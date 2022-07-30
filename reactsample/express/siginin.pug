@@ -1,0 +1,18 @@
+form(action="/join" method="post" onsubmit="return_check()")
+    table
+        tbody
+            tr
+                td 이메일
+                td: input(type="text" name="email")
+            tr
+                td 이름
+                td: input(type="text" name="name")
+            tr
+                td 비밀번호
+                td: input(type="password" name="password")
+            tr
+                td 비밀번호 확인
+                td: input(type="password" name="password-confirm")
+            tr
+                td(colspan="2")
+                td: input(type="submit" value="가입하기")
