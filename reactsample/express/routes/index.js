@@ -1,6 +1,8 @@
 const { Router } = require('express');
 const asyncHandler = require('../utils/async-handler');
 const { User } = require('../models');
+const hashPassword = require('../utils/hash-password');
+
 
 const router = Router();
 
@@ -23,8 +25,14 @@ router.get('/join', (req, res, next) => {
 
 router.post('/join', asyncHandler(async (req, res) => {
   const { email, name, password } = req.body;
-  const hashedPassword = // 비밀번호 해쉬값 만들기
-  const user = // 회원 생성하기
+  const hashedPassword = hashPassword(password);
+  // 비밀번호 해쉬값 만들기
+  const user = await User.create({
+    email,
+    name,
+    password:hashPassword,
+  });
+  // 회원 생성하기
   
   // 아래 코드 수정 시 오답으로 처리될 수 있습니다.
   console.log('신규 회원', user);
