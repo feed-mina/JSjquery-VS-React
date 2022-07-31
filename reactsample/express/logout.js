@@ -16,3 +16,5 @@ function loginRequired(req,res, next){
     next();
 }
 app.use('/posts',loginRequired, postsRouter);
+
+//로그인 확인 미들웨어 -> 로그인을 필수로 설정하고 싶을 경우, 미들웨어를 사용하여 체크할 수 있음.

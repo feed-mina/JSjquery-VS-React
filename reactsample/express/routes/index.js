@@ -40,4 +40,10 @@ router.post('/join', asyncHandler(async (req, res) => {
   res.redirect('/');
 }));
 
+router.get('/logout', (req, res, next) => {
+  req.logout();
+  res.redirect('/');
+});
+
+
 module.exports = router;
